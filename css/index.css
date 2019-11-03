@@ -15,10 +15,17 @@ h1, h2, h3, h4, h5, h6 {
   margin: 8px;
   color: #232323; }
 
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 36px; }
+
 p {
   font-family: 'glacial_indifferenceregular';
   margin: 8px;
-  color: #232323; }
+  color: #232323;
+  font-size: 18px; }
 
 a {
   font-family: 'glacial_indifferenceregular';
@@ -33,6 +40,10 @@ li {
 q {
   font-family: 'glacial_indifferenceregular';
   font-style: italic; }
+
+.blue-cap {
+  color: #33cfcf;
+  -webkit-text-stroke: 0.1px #232323; }
 
 body {
   margin: 0;
@@ -213,7 +224,7 @@ main {
     width: 100%;
     height: auto; }
   main .green-back {
-    height: 400px;
+    height: 275px;
     background-color: #33cfcf;
     width: 1024px;
     position: relative; }
@@ -226,8 +237,7 @@ main {
     margin: 16px;
     border-radius: 16px; }
     main .henry-about-me p {
-      color: #ffffff;
-      font-size: 22px; }
+      color: #ffffff; }
   main .section {
     max-width: 1024px;
     width: 100%;
