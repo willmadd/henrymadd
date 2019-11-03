@@ -1,0 +1,249 @@
+@font-face {
+  font-family: 'glacial_indifferenceregular';
+  src: url("../../fonts/glacialindifference-regular-webfont.woff2") format("woff2"), url("../../fonts/glacialindifference-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'norwesterregular';
+  src: url("../../fonts/norwester-webfont.woff2") format("woff2"), url("../../fonts/norwester-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: norwesterregular;
+  margin: 8px;
+  color: #232323; }
+
+p {
+  font-family: 'glacial_indifferenceregular';
+  margin: 8px;
+  color: #232323; }
+
+a {
+  font-family: 'glacial_indifferenceregular';
+  margin: 8px;
+  color: #232323;
+  color: inherit;
+  text-decoration: inherit; }
+
+li {
+  font-family: 'glacial_indifferenceregular'; }
+
+q {
+  font-family: 'glacial_indifferenceregular';
+  font-style: italic; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.social-icons {
+  display: flex;
+  flex-direction: row; }
+  .social-icons img {
+    height: 24px; }
+
+nav {
+  height: 0; }
+  @media (min-width: 1024px) {
+    nav {
+      display: flex;
+      height: auto;
+      background-color: #f96900;
+      justify-content: space-evenly;
+      align-items: center; } }
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease; }
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  font-family: "norwesterregular";
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  user-select: none;
+  width: calc(100vw - 50px); }
+  @media (min-width: 1024px) {
+    #menuToggle {
+      top: 0;
+      left: 0; } }
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none; }
+  @media (min-width: 1024px) {
+    #menuToggle input {
+      display: none; } }
+
+/*
+   * Just a quick hamburger
+   */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+  @media (min-width: 1024px) {
+    #menuToggle span {
+      display: none; } }
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%; }
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%; }
+
+/* 
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #ffffff; }
+
+/*
+   * But let's hide the middle one.
+   */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2); }
+
+/*
+   * Ohyeah and the last one should go the other direction
+   */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px); }
+
+/*
+   * Make this absolute positioned
+   * at the top left of the screen
+   */
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  box-sizing: border-box;
+  padding-bottom: 36px;
+  background: #232323;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  width: 100vw;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
+  @media (min-width: 1024px) {
+    #menu {
+      width: 100vw;
+      display: flex;
+      padding: 0;
+      margin: 0;
+      color: #ffffff;
+      align-items: center;
+      transform: translate(0, 0);
+      background-color: inherit; } }
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+  color: #ffffff; }
+  @media (min-width: 1024px) {
+    #menu li {
+      margin: 20px;
+      display: flex; } }
+
+/*
+   * And let's slide it in from the left
+   */
+#menuToggle input:checked ~ ul {
+  transform: none; }
+
+.home-nav {
+  text-align: center;
+  color: #ffffff; }
+  @media (min-width: 1024px) {
+    .home-nav {
+      margin-right: auto;
+      margin-left: 40px; } }
+
+footer {
+  width: 100%;
+  background-color: #33cfcf;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  main .head-image {
+    width: 100%;
+    height: auto; }
+  main .green-back {
+    height: 400px;
+    background-color: #33cfcf;
+    width: 1024px;
+    position: relative; }
+  main .henry-about-me {
+    width: 50%;
+    position: absolute;
+    top: -40px;
+    padding: 16px;
+    border: 2px solid #ffffff;
+    margin: 16px;
+    border-radius: 16px; }
+    main .henry-about-me p {
+      color: #ffffff;
+      font-size: 22px; }
+  main .section {
+    max-width: 1024px;
+    width: 100%;
+    margin-top: 48px; }
+    main .section h1 {
+      text-align: center;
+      margin: 24px; }
+  main .contact {
+    background: #f96900; }
+  main .gallery {
+    width: 100%;
+    background: #f96900;
+    min-height: 200px;
+    margin-top: 48px; }
+  main .grid-item {
+    width: calc(25vw - 7px); }
+  main .grid-item--width2 {
+    width: calc(50vw - 7px); }
+  main .grid-item img {
+    width: 100%; }
