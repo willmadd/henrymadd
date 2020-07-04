@@ -13,7 +13,7 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: norwesterregular;
   margin: 8px;
-  color: #232323; }
+  color: #1B1D1F; }
 
 h1 {
   font-size: 48px; }
@@ -24,26 +24,34 @@ h2 {
 p {
   font-family: 'glacial_indifferenceregular';
   margin: 8px;
-  color: #232323;
+  color: #1B1D1F;
   font-size: 18px; }
 
 a {
   font-family: 'glacial_indifferenceregular';
   margin: 8px;
-  color: #232323;
+  color: #1B1D1F;
   color: inherit;
   text-decoration: inherit; }
 
 li {
   font-family: 'glacial_indifferenceregular'; }
 
-q {
+q, address {
   font-family: 'glacial_indifferenceregular';
   font-style: italic; }
 
 .blue-cap {
-  color: #33cfcf;
-  -webkit-text-stroke: 0.1px #232323; }
+  color: #D4BD52;
+  -webkit-text-stroke: 0.1px #1B1D1F; }
+
+.orange-cap {
+  color: #1C6368;
+  -webkit-text-stroke: 0.1px #1B1D1F; }
+
+.white-cap {
+  color: #ffffff;
+  -webkit-text-stroke: 0.1px #1B1D1F; }
 
 body {
   margin: 0;
@@ -51,9 +59,18 @@ body {
 
 header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center; }
+  @media (min-width: 1024px) {
+    header {
+      flex-direction: row; } }
+  header p {
+    text-align: center;
+    color: #1C6368; }
+    @media (min-width: 1024px) {
+      header p {
+        text-align: unset; } }
 
 .social-icons {
   display: flex;
@@ -67,9 +84,14 @@ nav {
     nav {
       display: flex;
       height: auto;
-      background-color: #f96900;
+      background-color: #1C6368;
       justify-content: space-evenly;
-      align-items: center; } }
+      align-items: center;
+      position: sticky;
+      top: 0px;
+      z-index: 2; } }
+  nav h4 {
+    color: #ffffff; }
 
 a {
   text-decoration: none;
@@ -166,7 +188,7 @@ a {
   padding: 50px;
   box-sizing: border-box;
   padding-bottom: 36px;
-  background: #232323;
+  background: #1B1D1F;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   width: 100vw;
@@ -210,7 +232,7 @@ a {
 
 footer {
   width: 100%;
-  background-color: #33cfcf;
+  background-color: #1C6368;
   padding: 24px;
   display: flex;
   justify-content: center;
@@ -224,10 +246,14 @@ main {
     width: 100%;
     height: auto; }
   main .green-back {
-    height: 275px;
-    background-color: #33cfcf;
-    width: 1024px;
-    position: relative; }
+    min-height: 275px;
+    background-color: #D4BD52;
+    position: relative;
+    display: grid;
+    width: 100%; }
+    @media (min-width: 1024px) {
+      main .green-back {
+        width: 1024px; } }
   main .henry-about-me {
     width: 50%;
     position: absolute;
@@ -237,7 +263,20 @@ main {
     margin: 16px;
     border-radius: 16px; }
     main .henry-about-me p {
-      color: #ffffff; }
+      color: #1B1D1F; }
+  main .quote-wrapper {
+    width: 40%;
+    justify-self: end;
+    align-self: center; }
+  main h2.quote {
+    font-style: italic;
+    opacity: 0.5;
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 1px; }
+  main .orange-back {
+    background: #0A9EA3; }
   main .section {
     max-width: 1024px;
     width: 100%;
@@ -245,11 +284,23 @@ main {
     main .section h1 {
       text-align: center;
       margin: 24px; }
+  main .live-events {
+    padding: 16px;
+    box-sizing: border-box; }
+    main .live-events .when ul {
+      padding-left: 0; }
+      main .live-events .when ul li {
+        list-style: none; }
+    main .live-events .live-events-lower {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-bottom: 40px; }
+      main .live-events .live-events-lower img {
+        width: 100%; }
   main .contact {
-    background: #f96900; }
+    background: #D4BD52; }
   main .gallery {
     width: 100%;
-    background: #f96900;
     min-height: 200px;
     margin-top: 48px; }
   main .grid-item {
@@ -258,3 +309,66 @@ main {
     width: calc(50vw - 7px); }
   main .grid-item img {
     width: 100%; }
+  main .education {
+    background: #1C6368;
+    padding: 16px;
+    box-sizing: border-box;
+    padding-bottom: 40px; }
+    main .education p, main .education q {
+      color: #ffffff; }
+  main .rex {
+    background: #ffffff;
+    padding: 16px;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+    margin-top: 0; }
+  main .media .link-content {
+    display: grid;
+    grid-gap: 10px;
+    padding-left: 0;
+    grid-template-columns: 1fr; }
+    @media (min-width: 1024px) {
+      main .media .link-content {
+        grid-template-columns: 1fr 1fr 1fr; } }
+    main .media .link-content a {
+      color: #1C6368;
+      text-decoration: underline;
+      font-size: 22px;
+      color: #ffffff; }
+    main .media .link-content .media-link {
+      position: relative;
+      min-height: 180px;
+      z-index: 1;
+      display: flex;
+      align-items: flex-end; }
+      main .media .link-content .media-link:before {
+        content: "";
+        background-size: cover;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: .4; }
+      main .media .link-content .media-link:hover {
+        animation-duration: 0.3s;
+        animation-name: blur-hover; }
+    main .media .link-content .the-blue-nib:before {
+      background-image: url("../images/henry-bridge.jpg"); }
+    main .media .link-content .canterbury-culture:before {
+      background-image: url("../images/canterbury-culture.jpg"); }
+    main .media .link-content .the-forest-review:before {
+      background-image: url("../images/forest-review.jpg"); }
+    main .media .link-content .media-link {
+      list-style: none;
+      border: 2px solid #1B1D1F;
+      border-radius: 5px; }
+
+@keyframes blur-hover {
+  0% {
+    filter: blur(0px); }
+  50% {
+    filter: blur(1px); }
+  100% {
+    filter: blur(0px); } }

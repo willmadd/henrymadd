@@ -1,0 +1,49 @@
+h1, h2, h3, h4, h5, h6{
+    font-family: norwesterregular;
+    margin:8px;
+    color: $black;
+}
+
+h1{
+    font-size: 48px
+}
+h2{
+    font-size: 36px
+}
+
+p{
+    font-family: 'glacial_indifferenceregular';
+    margin:8px;
+    color: $black;
+    font-size:18px;
+}
+
+a{
+    font-family: 'glacial_indifferenceregular';
+    margin:8px;
+    color: $black;
+    color:inherit;
+    text-decoration: inherit;
+}
+
+li{
+    font-family: 'glacial_indifferenceregular';
+}
+q, address{
+    font-family: 'glacial_indifferenceregular';
+    font-style: italic;
+}
+
+.blue-cap{
+    color: $secondary;
+    -webkit-text-stroke: 0.1px $black;
+}
+
+.orange-cap{
+    color: $primary;
+    -webkit-text-stroke: 0.1px $black;
+}
+.white-cap{
+    color: $white;
+    -webkit-text-stroke: 0.1px $black;
+}

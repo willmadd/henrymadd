@@ -1,0 +1,17 @@
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    @media (min-width: $desktop) {
+        flex-direction: row;
+      }
+p{
+    text-align: center;
+    color: $primary;
+    @media (min-width: $desktop) {
+        text-align: unset;;
+      }
+}
+    
+}
